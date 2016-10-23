@@ -1,0 +1,196 @@
+﻿<Page
+    x:Class="Mikrokontroler8051_2._0.RodzajeRejestrowSpecjalnych"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mikrokontroler8051_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot Title="Rodzaje rejestrów specjalnych Intel'a 8051.">
+
+            <PivotItem Header="Bezpośrednio wykorzystywane">
+                <StackPanel>
+                    <TextBlock Text=" - akumulator [ACC] - (przetrzymuje 1 argument, następnie po działaniu wynik) "
+                               TextWrapping="WrapWholeWords"                               
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr ogólnego przeznaczenia [B] -     (zapas dla akumulatora) "
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - słowo stanu procesora [ProgramStatusWord]  "
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Wykorzystywane przy przerwaniach">
+                <StackPanel>
+                    <TextBlock Text=" - rejestr maski przerwań [JE]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr priorytetów przerwań [JP]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Adresowe">
+                <StackPanel>
+                    <TextBlock Text=" - wskaźnik stosu [SP](StackPointer)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr indeksowy [DPL] - DPTR (mniej znaczący bit)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr indeksowy [DPH] - DPTR (bardziej znaczący bit)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - DPTR (Data PoinTeR)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Z układami czasowymi">
+                <StackPanel>
+                    <TextBlock Text=" - rejestr sterujący układów czasowych 0i1 [TCON]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr trybu pracy układów czasowych [TMOD]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr danych układu czasowego 0 (mniej znaczący) [TL0]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr danych układu czasowego 1 (mniej znaczący) [TL1]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr danych układu czasowego 0 (bardziej znaczący) [TL0]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr danych układu czasowego 1 (bardziej znaczący) [TL1]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - TCON - (Timer Control)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - TMOD - (Timer Mode)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Dot. transmisji szeregowej">
+                <StackPanel>
+                    <TextBlock Text=" - rejestr sterujący układu transmisji szeregowej [SCON]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestr danych układu transmisji szeregowej [SBUF]"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - SCON - (Serial Control)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - SBUF - (Serial Buffer)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Pozostałe">
+                <StackPanel>
+                    <TextBlock Text=" - Podporządkowane portom wejścia/wyjścia:"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text="- Port0, Port1, Port2, Port3 (wejście / wyjście)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - Sterujący stanami uśpienia:"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - PCON - (Power Control)"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
+

@@ -1,0 +1,166 @@
+﻿<Page
+    x:Class="Mikrokontroler8051_2._0.Porty0123"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mikrokontroler8051_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot Title="Porty P0,P1,P2,P3 Mikrokontrolera Intel 8051">
+            <PivotItem Header="Port 0 (końcówki 32-39)">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*"    />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text=" - Podstawowe funkcje jako dwukierunkowej bramy do wymiany danych takie jak w przypadku portów P1 i P2."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+
+                        <TextBlock Text=" - Zwiększona obciążalność (do 8 wejść TTL)."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+
+                        <TextBlock Text=" - Funkcja multipleksowanej magistrali danych (8bitów D7..D0) i młodszej części adresu (A7..A0)."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <Image Source="Assets/port0.jpg" />
+                    </StackPanel>
+
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="Port 1 (końcówki 1-8)">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*"    />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text=" - Zapis przykładowej liczby do portu P1."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+
+                        <TextBlock Text=" - Sterowanie urządzeniami za pomocą sygnałów portu P1: np. wentylator, tv, brama wjazdowa."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <Image Source="Assets/port1.jpg" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="Port 2 (końcówki 21-28)">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*"    />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text=" - P2 spełnia takie funkcje jak P1 oraz przekazuje starszą część adresu (A15-A8) przy dostępie do zewnętrznej pamięci danych lub programów."
+                                       TextWrapping="WrapWholeWords"
+                                       FontSize="20"
+                                       Margin="5"
+                                       Foreground="Black"
+                                       ></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <Image Source="Assets/port2.jpg" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="Port 3 (końcówki 10-17)">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*"    />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+
+                        <TextBlock Text="- P3.0 -> RxD (Receive Data) - odbiór danych."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- P3.1 -> TxD (Transmit Data) - wysył danych."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- P3.2/3 - INT0/1 - linie przerwań z układów zewnętrznętrznych."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- P3.4/5 - T0/1 - linie Timerów."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+
+                        <TextBlock Text=" - P3.6 - WR - sygnał zapisu do wewnętrznej pamięci."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+
+                        <TextBlock Text=" - P3.7 - RD - wysyła sygnał do odczytu."
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="2"
+                                   Foreground="Black"
+                                   ></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <Image Source="Assets/port3.jpg" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
+

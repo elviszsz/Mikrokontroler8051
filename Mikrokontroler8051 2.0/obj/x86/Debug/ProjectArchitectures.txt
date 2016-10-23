@@ -1,0 +1,1 @@
+c:\users\oskar\documents\visual studio 2015\Projects\Mikrokontroler8051 2.0\Mikrokontroler8051 2.0\Mikrokontroler8051 2.0.csproj;x86

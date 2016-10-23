@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Mikrokontroler8051_2._0.JednostkaArtymetycznoLogiczna"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mikrokontroler8051_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot Title="Jednostka Arytmetyczno-Logiczna Intel'a 8051">
+
+            <PivotItem Header="Rozkazy wykonywane przez ALU:">
+                <StackPanel>
+                    <TextBlock Text=" - działania arytmetyczne: +, -, *, /,"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - zmiana znaku liczby,"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - porównywanie dwóch liczb,"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - działania logiczne: "
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text="       - suma logiczna, iloczyn logiczny, suma modulo 2(różnica symetryczna), negacja"
+                               FontWeight="Bold"
+                               TextWrapping="WrapWholeWords"
+                               FontSize="18"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - działania na bitach (m.in. przesunięcie bitu w lewo/prawo). "
+                               TextWrapping="WrapWholeWords"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Elementy składowe jednostki ALU:">
+                <StackPanel>
+                    <TextBlock Text=" - 8bitowa jednostka arytmetyczno-logiczna (arytrometr) z układem korekcji dziesiętnej, "
+                               TextWrapping="WrapWholeWords"
+                               FontWeight="Bold"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+
+                    <TextBlock Text=" - rejestry pomocnicze używane przy wykonywaniu obliczeń (niedostępne dla programisty)."
+                               TextWrapping="WrapWholeWords"
+                               FontWeight="Bold"
+                               FontSize="22"
+                               Margin="5"
+                               ></TextBlock>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

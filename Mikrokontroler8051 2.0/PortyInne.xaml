@@ -1,0 +1,241 @@
+﻿<Page
+    x:Class="Mikrokontroler8051_2._0.PortyInne"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mikrokontroler8051_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <RelativePanel Grid.Row="0">
+
+            <Button Name="rst_but"                        
+                        Content="Końcówka nr 9: RST"
+                        FontSize="22"
+                        FontStyle="Italic"
+                        Margin="10"
+                        Height="40"
+                        Width="250"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Click="rst_but_Click"
+                        ></Button>
+
+            <StackPanel Name="rst_panel"
+                        RelativePanel.Below="rst_but"
+                        Width="{Binding ActualWidth, ElementName=main_panel}"
+                        Background="White"
+                        Margin="5">
+
+                <TextBlock Text="Reset (RST) - Przypadki generowania tego sygnału:" 
+                                    TextWrapping="WrapWholeWords"
+                                    FontStyle="Italic"
+                                    FontSize="22"
+                                    Foreground="Black"
+                                    Margin="5"
+                                    ></TextBlock>
+
+                <TextBlock Text=" - po włączeniu zasilania układu,"
+                                    TextWrapping="WrapWholeWords"
+                                    FontSize="20"
+                                    Foreground="Black"
+                                    FontWeight="Bold"
+                                    ></TextBlock>
+
+                <TextBlock Text=" - na żądanie, poprzez przyciśnięcie klawisza,"
+                                    TextWrapping="WrapWholeWords"
+                                    FontSize="20"
+                                    Foreground="Black"
+                                    FontWeight="Bold"
+                                    ></TextBlock>
+
+                <TextBlock Text=" - w sytuacjach awaryjnych, gdy nastąpi zawieszenie mikroprocesora."
+                                    TextWrapping="WrapWholeWords"
+                                    FontSize="20"
+                                    Foreground="Black"
+                                    FontWeight="Bold"
+                                    ></TextBlock>
+            </StackPanel>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="1">
+
+            <Button Name="vss_but"                        
+                        Content="Końcówka nr 20: VSS"
+                        FontSize="22"
+                        FontStyle="Italic"
+                        Margin="10"
+                        Height="40"
+                        Width="250"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        Click="vss_but_Click"
+                        ></Button>
+
+            <StackPanel Name="vss_panel"
+                        RelativePanel.Below="vss_but"
+                        Width="{Binding ActualWidth, ElementName=main_panel}"
+                        Background="White"
+                        Margin="5">
+
+                <TextBlock Text=" - (Vss) - Ujemy biegun napięcia zasilającego (GND)." 
+                           FontWeight="Bold"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           FontSize="22"
+                           Foreground="Black"
+                           Margin="5"
+                           ></TextBlock>
+            </StackPanel>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="2">
+
+            <Button Name="psen_but"                        
+                    Content="Końcówka nr 29: PSEN"
+                    FontSize="22"
+                    FontStyle="Italic"
+                    Margin="10"
+                    Height="40"
+                    Width="250"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Click="psen_but_Click"
+                    ></Button>
+
+            <StackPanel Name="psen_panel"
+                        RelativePanel.Below="psen_but"
+                        Width="{Binding ActualWidth, ElementName=main_panel}"
+                        Background="White"
+                        Margin="5">
+
+                <TextBlock Text=" - (~PSEN) - W przypadku pracy procesora z zewnętrzną pamięcią programu końcówka ta wysyła sygnał odczytu z tej pamięci." 
+                           FontWeight="Bold"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           FontSize="22"
+                           Foreground="Black"
+                           Margin="5"
+                           ></TextBlock>
+
+                <TextBlock Text=" - Linia jest aktywna jeżeli podaje się sygnał logiczny 0." 
+                           FontWeight="Bold"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           FontSize="20"
+                           Foreground="Black"
+                           Margin="5"
+                           ></TextBlock>
+            </StackPanel>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="3">
+
+            <Button Name="ale_but"                        
+                    Content="Końcówka nr 30: ALE"
+                    FontSize="22"
+                    FontStyle="Italic"
+                    Margin="10"
+                    Height="40"
+                    Width="250"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Click="ale_but_Click"
+                    ></Button>
+
+            <StackPanel Name="ale_panel"
+                        RelativePanel.Below="ale_but"
+                        Width="{Binding ActualWidth, ElementName=main_panel}"
+                        Background="White"
+                        Margin="5">
+
+                <TextBlock Text=" - (ALE) - sygnał zapisu adresu (młodszej części) do rejestru zatrzaskowego (LATCH)." 
+                           FontWeight="Bold"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           FontSize="22"
+                           Foreground="Black"
+                           Margin="5"
+                           ></TextBlock>
+            </StackPanel>
+
+            <Button Name="latch_but"
+                    Content="Schemat LATCH"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.Below="ale_panel"
+                    Background="DarkRed"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderBrush="Black"
+                    Click="latch_but_Click"
+                    ></Button>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="4">
+
+            <Button Name="ea_but"                        
+                    Content="Końcówka nr 31: EA"
+                    FontSize="22"
+                    FontStyle="Italic"
+                    Margin="10"
+                    Height="40"
+                    Width="250"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Click="ea_but_Click">
+            </Button>
+
+            <StackPanel Name="ea_panel"
+                            RelativePanel.Below="ea_but"
+                            Width="{Binding ActualWidth, ElementName=main_panel}"
+                            Background="White"
+                            Margin="5">
+
+                <TextBlock Text=" - (~EA) - powinna być podłączona do masy, jeżeli mikroprocesor pobiera rozkazy z zewnętrznej pamięci programu, lub do + zasilania (5V) jeżeli z pamięci wewnętrznej." 
+                               FontWeight="Bold"
+                               TextWrapping="WrapWholeWords"
+                               FontStyle="Italic"
+                               FontSize="22"
+                               Foreground="Black"
+                               Margin="5"
+                               ></TextBlock>
+
+            </StackPanel>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="5">
+
+            <Button Name="vcc_but"                        
+                    Content="Końcówka nr 40: VCC"
+                    FontSize="22"
+                    FontStyle="Italic"
+                    Margin="10"
+                    Height="40"
+                    Width="250"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Click="vcc_but_Click">
+            </Button>
+
+            <StackPanel Name="vcc_panel"
+                        RelativePanel.Below="vcc_but"
+                        Width="{Binding ActualWidth, ElementName=main_panel}"
+                        Background="White"
+                        Margin="5">
+
+                <TextBlock Text=" - (Vcc) - końcówka zasilania." 
+                           FontWeight="Bold"
+                           TextWrapping="WrapWholeWords"
+                           FontStyle="Italic"
+                           FontSize="22"
+                           Foreground="Black"
+                           Margin="5"
+                           ></TextBlock>
+            </StackPanel>
+        </RelativePanel>
+    </Grid>
+</Page>

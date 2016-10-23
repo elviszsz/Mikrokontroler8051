@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Mikrokontroler8051_2._0.PamiecDanych"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mikrokontroler8051_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"    />
+            <RowDefinition Height="*"    />
+        </Grid.RowDefinitions>
+
+        <RelativePanel Grid.Row="0">
+
+            <TextBlock x:ConnectionId='1' Name="naglowek"
+                       Text="Pamięć danych mikrokontrolera Intel 8051."
+                       TextAlignment="Justify"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="5"
+                       RelativePanel.AlignTopWithPanel="True"
+                       ></TextBlock>
+
+            <TextBlock Text=" - Pamięć wewnętrzna - 128B ciągłego obszaru pamięci RAM oraz 128B niespójnego bloku rejestrów specjalnych (SFR). W wewnętrznej pamięci danych umieszczany jest stos mikrokontrolera-obszar pamięci typu LIFO(Last In First Out (ostatnia zapisana dana jest odczytywana jako pierwsza))."
+                       TextWrapping="WrapWholeWords"
+                       FontSize="22"
+                       Margin="15"
+                       RelativePanel.Below="naglowek"
+                       ></TextBlock>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="1">
+            <Pivot>
+                <PivotItem Header="Adresy">
+                    <StackPanel>
+
+                        <TextBlock Text="- 0-7 (0H-7H) => rejestry R0-R7 - blok 0."
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- 8-15 (8H-0FH) => rejestry R0-R7 - blok 1."
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- 16-23 (10H-17H) => rejestry R0-R7 - blok 2."
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- 24-31 (18H-1FH) => rejestry R0-R7 - blok 3."
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- 32-47 (20H-2FH) => pamięć adresowana bitowo(adresy [0-127][0H-7FH])"
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+
+                        <TextBlock Text="- 48-127 (30H-7FH) => pamięć danych użytkownika."
+                                   TextWrapping="WrapWholeWords"
+                                   FontSize="18"
+                                   Margin="5"
+                                   ></TextBlock>
+                    </StackPanel>
+                </PivotItem>
+            </Pivot>
+        </RelativePanel>
+    </Grid>
+</Page>
+
